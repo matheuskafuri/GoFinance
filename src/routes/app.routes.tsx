@@ -6,6 +6,7 @@ import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import { Dashboard } from '../screens/Dashboard';
 import { Register } from '../screens/Register';
+import { Resume } from '../screens/Resume';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -14,6 +15,7 @@ export function AppRoutes(){
 
   return(
     <Navigator
+    
       screenOptions={{
         tabBarActiveTintColor: theme.colors.secondary,
         tabBarInactiveTintColor: theme.colors.text,
@@ -25,7 +27,7 @@ export function AppRoutes(){
       }}
     >
       <Screen
-        name="Listagem"
+        name="Dashboard"
         component={Dashboard} 
         options={{
           tabBarIcon: (({ size, color }) => (
@@ -56,7 +58,7 @@ export function AppRoutes(){
       />
       <Screen
         name="Resumo"
-        component={Register} 
+        component={Resume} 
         options={{
           tabBarIcon: (({ size, color }) => (
             <MaterialIcons 
