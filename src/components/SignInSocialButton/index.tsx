@@ -19,7 +19,7 @@ export function SignInSocialButton({
   ...rest
 }: Props) {
   return (
-    <Button>
+    <Button {...rest}>
       <ImageContainer>
         <Svg />
       </ImageContainer>
