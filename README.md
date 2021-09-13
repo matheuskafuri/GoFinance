@@ -2,4 +2,5 @@
 
 Take full control of your own finances and pave the way to your finacial freedom
 
-![Capa](https://user-images.githubusercontent.com/67206853/122784845-34049480-d289-11eb-9434-96393ceb61da.png)
+![Capa (1)](https://user-images.githubusercontent.com/67206853/133137545-7872a0bd-5bfe-4937-8b6d-6c9811a2edb9.png)
+
