@@ -49,7 +49,7 @@ function AuthProvider({ children }: AuthProviderProps ) {
 
   async function signInWithGoogle() {
     try {
-      //o que queremos pegar como do usuário como resposta na autenticação
+      //o que queremos pegar do usuário como resposta na autenticação
       const RESPONSE_TYPE = 'token';
       //o que quero acessar do usuário
       const SCOPE = encodeURI('profile email');
@@ -59,9 +59,12 @@ function AuthProvider({ children }: AuthProviderProps ) {
       const {type, params} = await AuthSession
       .startAsync({ authUrl }) as AuthorizationResponse;
 
+      
+
       if (type === 'success') {
         const response = await fetch(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${params.access_token}`);
         const userInfo = await response.json();
+        console.log(response);
 
         // console.log(userInfo);
 
@@ -78,7 +81,7 @@ function AuthProvider({ children }: AuthProviderProps ) {
 
 
     } catch (error) {
-      throw new Error(error);
+      throw new Error('Error on sign in with google');
     }
     
   }
@@ -107,7 +110,7 @@ function AuthProvider({ children }: AuthProviderProps ) {
         await AsyncStorage.setItem(userStorageKey, JSON.stringify(userLogged));
       }
     } catch (error) {
-      throw new Error(error);
+      throw new Error('Error with Apple Authentication');
     }
   }
 
