@@ -19,15 +19,12 @@
         "svg"
       ]
     },
-    "description": "The easiest way to manage your finances."
-  },
-  "splash": {
-    "image": "./assets/splash.png",
-    "resizeMode": "contain",
-    "backgroundColor": "#ffffff"
-  },
-  "icon": {
-    "image": "./assets/icon.png",
-    "resizeMode": "contain"
+    "description": "The easiest way to manage your finances.",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#5636D3"
+    },
+    "icon": "./assets/icon.png"
   }
 }
